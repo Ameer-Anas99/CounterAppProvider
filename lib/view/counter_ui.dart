@@ -36,14 +36,24 @@ class _CounterPageState extends State<CounterPage> {
             ),
           ),
           ElevatedButton(
-              onPressed: () {
-                // incrementcounter();
-                count.increese();
-              },
-              child: const Text(
-                "Add",
-                style: TextStyle(fontSize: 20, color: Colors.green),
-              )),
+            onPressed: () {
+              // incrementcounter();
+              count.increese();
+            },
+            child: const Text(
+              "Add",
+              style: TextStyle(fontSize: 20, color: Colors.green),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              count.reduce();
+            },
+            child: const Text(
+              "Remove",
+              style: TextStyle(fontSize: 18, color: Colors.red),
+            ),
+          ),
         ],
       ),
     );
