@@ -8,7 +8,9 @@ class CounterProvider extends ChangeNotifier {
   }
 
   void reduce() {
-    counter--;
+    if (counter > 0) {
+      counter--;
+    }
     notifyListeners();
   }
 
