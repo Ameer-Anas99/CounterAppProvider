@@ -30,29 +30,46 @@ class _CounterPageState extends State<CounterPage> {
                   value.counter.toString(),
 
                   style: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.w600),
+                      fontSize: 40, fontWeight: FontWeight.w600),
                 );
               },
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              // incrementcounter();
-              count.increese();
-            },
-            child: const Text(
-              "Add",
-              style: TextStyle(fontSize: 20, color: Colors.green),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              count.reduce();
-            },
-            child: const Text(
-              "Remove",
-              style: TextStyle(fontSize: 18, color: Colors.red),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  // incrementcounter();
+                  count.increese();
+                },
+                child: const Text(
+                  "Add",
+                  style: TextStyle(fontSize: 20, color: Colors.green),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    count.reset();
+                  },
+                  child: const Text(
+                    "Reset",
+                    style: TextStyle(fontSize: 20),
+                  )),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: () {
+                  count.reduce();
+                },
+                child: const Text(
+                  "Remove",
+                  style: TextStyle(fontSize: 20, color: Colors.red),
+                ),
+              ),
+            ],
           ),
         ],
       ),
